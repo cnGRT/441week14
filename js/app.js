@@ -1,9 +1,9 @@
-// The last three digits of the student ID are 711
+// 学生ID后三位为 711
 
-let courses = [];          // Store course data
-let resourceKits = [];     // Store the data of the resource package
+let courses = [];          // 存储课程数据
+let resourceKits = [];     // 存储资源包数据
 
-//===== Load Course Data =====
+// ===== 加载课程数据 =====
 function loadCourses711() {
   fetch('data/courses.json')
     .then(res => res.json())
@@ -14,7 +14,7 @@ function loadCourses711() {
     .catch(err => console.error('Error loading courses:', err));
 }
 
-// ===== Render the course card =====
+// ===== 渲染课程卡片 =====
 function displayCourses711() {
   const container = document.getElementById('courses-list');
   if (!container) return;
@@ -40,7 +40,7 @@ function displayCourses711() {
   });
 }
 
-// ===== Load the resource package data =====
+// ===== 加载资源包数据 =====
 function loadResourceKits711() {
   return fetch('data/resource_kits.json')
     .then(res => res.json())
@@ -48,12 +48,12 @@ function loadResourceKits711() {
       resourceKits = data;
       displayResourceKits711();
       displayCartItems711();
-      return data; // Returns data for chaining
+      return data; // 返回数据以便链式调用
     })
     .catch(err => console.error('Error loading resource kits:', err));
 }
 
-// ===== Render a list of resource packs =====
+// ===== 渲染资源包列表 =====
 function displayResourceKits711() {
   const container = document.getElementById('resource-kits-list');
   if (!container) return;
@@ -74,7 +74,7 @@ function displayResourceKits711() {
   });
 }
 
-// ===== Shopping cart function =====
+// ===== 购物车功能 =====
 function getCartData711() {
   const currentUser = sessionStorage.getItem('currentUser');
   if (!currentUser) return [];
@@ -212,7 +212,7 @@ function getTotalPrice711() {
   }, 0);
 }
 
-// ===== Order confirmation page feature =====
+// ===== 订单确认页面功能 =====
 function initOrderConfirmPage711() {
   const user = JSON.parse(sessionStorage.getItem('currentUser'));
   if (!user) {
@@ -249,7 +249,7 @@ function initOrderConfirmPage711() {
   totalElement.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-// ===== Modify the confirmOrder711 function =====
+// ===== 修改 confirmOrder711 函数 =====
 function confirmOrder711() {
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
     if (!currentUser) {
@@ -257,17 +257,17 @@ function confirmOrder711() {
         return;
     }
 
-    // Get shopping cart data
+    // 获取购物车数据
     const cart = JSON.parse(localStorage.getItem(`cart_${currentUser.username}`)) || [];
     if (cart.length === 0) {
         alert('Your cart is empty!');
         return;
     }
 
-    // Obtain the resource package data to save the complete order information
+    // 获取资源包数据用于保存完整订单信息
     const resourceKits = JSON.parse(localStorage.getItem('resourceKits')) || [];
     
-    // Create a line item with full product information
+    // 创建包含完整商品信息的订单项
     const orderItems = cart.map(item => {
         const kit = resourceKits.find(k => k.id === item.id);
         return {
@@ -279,26 +279,26 @@ function confirmOrder711() {
         };
     });
 
-    // Calculate the total amount
+    // 计算总金额
     const total = orderItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-    // Create an order object
+    // 创建订单对象
     const newOrder = {
-        user: currentUser.username,  // Use usernames explicitly
+        user: currentUser.username,  // 明确使用用户名
         items: orderItems,
         total: total,
-        timestamp: new Date().toISOString()  // Add a timestamp
+        timestamp: new Date().toISOString()  // 添加时间戳
     };
 
-    // Save to localStorage
+    // 保存到 localStorage
     const orders = JSON.parse(localStorage.getItem('orders') || []);
     orders.push(newOrder);
     localStorage.setItem('orders', JSON.stringify(orders));
 
-    // Clear the current user's cart
+    // 清空当前用户的购物车
     localStorage.removeItem(`cart_${currentUser.username}`);
 
-    // Jump to the Order Management page
+    // 跳转到订单管理页面
     window.location.href = 'order-management.html';
 }
 
@@ -307,7 +307,7 @@ function editOrder711() {
   window.location.href = 'cart.html';
 }
 
-// ===== User authentication function =====
+// ===== 用户认证功能 =====
 function checkLoginState711() {
   if (sessionStorage.getItem('currentUser')) {
     const nav = document.querySelector('nav');
@@ -420,7 +420,7 @@ function validateLoginForm711(event) {
     window.location.href = 'cart.html';
   }
 }
-// ===== Order management module =====
+// ===== 订单管理模块 =====
 function initOrderManagement711() {
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
     if (!currentUser) {
@@ -428,7 +428,7 @@ function initOrderManagement711() {
         return;
     }
 
-    // Make sure that there is a rebinding event for the button
+    // 确保按钮存在再绑定事件
     const downloadBtn = document.getElementById('download-orders');
     const clearBtn = document.getElementById('clear-storage');
     
@@ -440,7 +440,7 @@ function initOrderManagement711() {
         clearBtn.addEventListener('click', handleClearStorage711);
     }
 
-    // The order is displayed after the package data is loaded
+    // 加载资源包数据后显示订单
     fetch('data/resource_kits.json')
         .then(res => res.json())
         .then(data => {
@@ -449,12 +449,12 @@ function initOrderManagement711() {
         })
         .catch(error => {
             console.error('Failed to load resource kits:', error);
-            loadAndDisplayOrders711(); // Still trying to show the order
+            loadAndDisplayOrders711(); // 仍尝试显示订单
         });
 }
 
 function initOrderManagementEvents711() {
-  // Download order events
+  // 下载订单事件
   document.getElementById('download-orders').addEventListener('click', () => {
     try {
       const orders = getFilteredOrders711();
@@ -469,7 +469,7 @@ function initOrderManagementEvents711() {
     }
   });
 
-  // Clear data events
+  // 清除数据事件
   document.getElementById('clear-orders').addEventListener('click', () => {
     if (confirm('This will permanently delete your order history and cart. Proceed?')) {
       clearUserData711();
@@ -478,17 +478,17 @@ function initOrderManagementEvents711() {
     }
   });
 
-  // Log out of the event
+  // 登出事件
   document.getElementById('logout-btn').addEventListener('click', () => {
     sessionStorage.removeItem('currentUser');
     window.location.href = 'login.html';
   });
 }
 
-// ===== Core function implementation =====
-// ===== Order management features =====
+// ===== 核心功能实现 =====
+// ===== 订单管理功能 =====
 function initOrderManagement711() {
-    // Verify your sign-in status
+    // 验证登录状态
     const currentUser = sessionStorage.getItem('currentUser');
     if (!currentUser) {
         alert('Please login to access order management');
@@ -496,24 +496,24 @@ function initOrderManagement711() {
         return;
     }
 
-    // Initialize event listening
+    // 初始化事件监听
     document.getElementById('download-orders').addEventListener('click', handleDownloadOrders711);
     document.getElementById('clear-storage').addEventListener('click', handleClearStorage711);
 
-    // Load and display the order
+    // 加载并显示订单
     loadAndDisplayOrders711();
 }
 
-// ===== Modify the loadAndDisplayOrders711 function =====
+// ===== 修改 loadAndDisplayOrders711 函数 =====
 function loadAndDisplayOrders711() {
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
     if (!currentUser) return;
 
-    // Get and filter orders
+    // 获取并过滤订单
     const orders = JSON.parse(localStorage.getItem('orders') || []);
     const userOrders = orders.filter(order => order.user === currentUser.username);
 
-    //Render the list of orders
+    // 渲染订单列表
     const ordersList = document.getElementById('orders-list');
     ordersList.innerHTML = userOrders.length > 0 
         ? userOrders.map((order, index) => `
@@ -546,7 +546,7 @@ function handleDownloadOrders711() {
         return;
     }
 
-    // Get and filter orders
+    // 获取并过滤订单
     const orders = JSON.parse(localStorage.getItem('orders') || []);
     const userOrders = orders.filter(order => 
         order.user === currentUser.username && order.items.length > 0
@@ -557,7 +557,7 @@ function handleDownloadOrders711() {
         return;
     }
 
-    //Build download data (with full product information)
+    // 构建下载数据（包含完整商品信息）
     const downloadData = {
         meta: {
             generatedAt: new Date().toISOString(),
@@ -568,30 +568,30 @@ function handleDownloadOrders711() {
             ...order,
             items: order.items.map(item => ({
                 ...item,
-                // Add package details
+                // 添加资源包详细信息
                 kitDetails: resourceKits.find(k => k.id === item.id) || null
             }))
         }))
     };
 
     try {
-        // Create a blob object
+        // 创建Blob对象
         const blob = new Blob(
             [JSON.stringify(downloadData, null, 2)], 
             { type: 'application/json;charset=utf-8' }
         );
         
-        // Create a download link
+        // 创建下载链接
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
         a.download = `TechLearn_Orders_${currentUser.username}_${Date.now()}.json`;
         
-        // Trigger the download
+        // 触发下载
         document.body.appendChild(a);
         a.click();
         
-        // Clean up resources
+        // 清理资源
         setTimeout(() => {
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
@@ -609,26 +609,26 @@ function handleClearStorage711() {
 
     if (!confirm('This will permanently delete ALL your data. Continue?')) return;
 
-    // Clear cart (quarantine with username)
+    // 清除购物车（使用用户名隔离）
     localStorage.removeItem(`cart_${currentUser.username}`);
     
-    // Clear order history (keep other user data)
+    // 清除订单历史（保留其他用户数据）
     const allOrders = JSON.parse(localStorage.getItem('orders') || []);
     const filteredOrders = allOrders.filter(order => 
         order.user !== currentUser.username
     );
     localStorage.setItem('orders', JSON.stringify(filteredOrders));
     
-    // Update the display immediately
+    // 立即更新显示
     if (document.getElementById('orders-list')) {
         document.getElementById('orders-list').innerHTML = 
             '<p class="no-orders">No orders found</p>';
     }
     
-    // Show feedback
+    // 显示反馈
     alert('All your data has been cleared');
     
-    // Refresh if it is currently on the order page
+    // 如果当前在订单页面则刷新
     if (window.location.pathname.includes('order-management.html')) {
         setTimeout(() => window.location.reload(), 500);
     }
@@ -637,9 +637,9 @@ function handleClearStorage711() {
 
 
 
-// ===== Page initialization =====
+// ===== 页面初始化 =====
 document.addEventListener('DOMContentLoaded', () => {
-      // Make sure that the package data is loaded first
+      // 确保资源包数据先加载
     fetch('data/resource_kits.json')
         .then(res => res.json())
         .then(data => {
