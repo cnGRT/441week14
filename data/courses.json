@@ -1,0 +1,47 @@
+[
+    {
+        "id": "C001",
+        "name": "Cybersecurity Fundamentals",
+        "description": "Learn essential cybersecurity concepts and practices to protect systems and data.",
+        "assessment": "Written test + Practical demonstration",
+        "sampleProject": "Design a security policy for a small business",
+        "image": "cybersecurity-course.jpg",
+        "imageAlt": "Cybersecurity course illustration"
+    },
+    {
+        "id": "C002",
+        "name": "Full Stack Web Development",
+        "description": "Master front-end and back-end development with modern JavaScript frameworks.",
+        "assessment": "Code submission + Project defense",
+        "sampleProject": "Build a responsive e-commerce site",
+        "image": "webdev-course.jpg",
+        "imageAlt": "Web development course illustration"
+    },
+    {
+        "id": "C003",
+        "name": "Data Science Essentials",
+        "description": "Introduction to data analysis, visualization, and machine learning concepts.",
+        "assessment": "Case study analysis + Final report",
+        "sampleProject": "Analyze and visualize a real-world dataset",
+        "image": "datascience-course.jpg",
+        "imageAlt": "Data science course illustration"
+    },
+    {
+        "id": "C004",
+        "name": "Cloud Computing with AWS",
+        "description": "Learn to deploy and manage applications on Amazon Web Services.",
+        "assessment": "Practical deployment tasks + Documentation",
+        "sampleProject": "Deploy a scalable web application",
+        "image": "aws-course.jpg",
+        "imageAlt": "AWS cloud computing course illustration"
+    },
+    {
+        "id": "C005",
+        "name": "Python Programming",
+        "description": "From basics to advanced Python concepts for automation and development.",
+        "assessment": "Coding challenges + Project submission",
+        "sampleProject": "Create a data processing automation script",
+        "image": "python-course.jpg",
+        "imageAlt": "Python programming course illustration"
+    }
+]

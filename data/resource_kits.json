@@ -1,0 +1,58 @@
+[
+  {
+    "id": "K001",
+    "name": "HTML & CSS Kit",
+    "description": "Comprehensive resources for learning HTML and CSS.",
+    "price": 99.00,
+    "image": "kit1.jpg"
+  },
+  {
+    "id": "K002",
+    "name": "JavaScript Essentials",
+    "description": "Essential JS tools and exercises.",
+    "price": 129.00,
+    "image": "kit2.jpg"
+  },
+  {
+    "id": "K003",
+    "name": "React Developer Bundle",
+    "description": "React projects, templates, and documentation.",
+    "price": 199.00,
+    "image": "kit3.jpg"
+  },
+  {
+    "id": "K004",
+    "name": "Node.js Toolkit",
+    "description": "Server-side development tools and examples.",
+    "price": 149.00,
+    "image": "kit4.jpg"
+  },
+  {
+    "id": "K005",
+    "name": "UI/UX Design Kit",
+    "description": "Design principles, Figma templates, and wireframes.",
+    "price": 89.00,
+    "image": "kit5.jpg"
+  },
+  {
+    "id": "K006",
+    "name": "Python Programming Guide",
+    "description": "From beginner to intermediate Python programming.",
+    "price": 119.00,
+    "image": "kit6.jpg"
+  },
+  {
+    "id": "K007",
+    "name": "Database Management Starter",
+    "description": "SQL and NoSQL database guides and exercises.",
+    "price": 109.00,
+    "image": "kit7.jpg"
+  },
+  {
+    "id": "K008",
+    "name": "DevOps Tools Pack",
+    "description": "Docker, Jenkins, CI/CD pipelines and more.",
+    "price": 179.00,
+    "image": "kit8.jpg"
+  }
+]
