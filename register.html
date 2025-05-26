@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - TechLearn Academy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">TechLearn Academy</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Registration Form -->
+  <section class="auth-container">
+    <h2 class="form-title">Create Your Account</h2>
+    <form id="register-form" novalidate>
+      <!-- Username -->
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control" required />
+        <div class="error-message">Please enter a username.</div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" required />
+        <div class="password-rules">Must be at least 8 characters long and include one special character.</div>
+        <div class="error-message">Password does not meet requirements.</div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" class="form-control" required />
+        <div class="error-message">Passwords do not match.</div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" required />
+        <div class="error-message">Please enter a valid email address.</div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" class="form-control" required />
+        <div class="error-message">Please enter a valid phone number.</div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-block">Register</button>
+    </form>
+    <p class="text-center">Already have an account? <a href="login.html">Login here</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 TechLearn Academy | RTO 45678901</p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>

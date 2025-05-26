@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Management - TechLearn</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 添加到css/styles.css中 */
+        .order-management {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .order-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .order-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .order-details {
+            margin-left: 1rem;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .order-total {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">TechLearn Academy</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="order-management.html">My Orders</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="order-management">
+        <h1>Order Management</h1>
+        
+        <div class="order-actions">
+            <button class="btn" id="download-orders">Download Orders (JSON)</button>
+            <button class="btn btn-danger" id="clear-storage">Clear My Data</button>
+        </div>
+
+        <h2>Order History</h2>
+        <div id="orders-list">
+            <!-- 订单将通过JavaScript动态加载 -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechLearn Academy | RTO 45678901</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart - TechLearn Academy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">TechLearn Academy</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Cart Page Title -->
+  <section class="hero">
+    <h1>Your Shopping Cart</h1>
+    <p>Please review your selected training resource kits before proceeding.</p>
+  </section>
+
+  <!-- Cart Items -->
+  <section class="cart-container container">
+    <div id="cart-items"></div>
+    <div class="cart-total" id="cart-total">Total: $0.00</div>
+    <div class="order-actions">
+      <button class="btn btn-danger" onclick="clearCart711()">Clear Cart</button>
+      <button class="btn" onclick="proceedToCheckout711()">Proceed to Checkout</button>
+    </div>
+  </section>
+
+  <!-- Available Resource Kits -->
+  <section class="resource-kits-section container">
+    <h2>Available Training Resource Kits</h2>
+    <div id="resource-kits-list"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 TechLearn Academy | RTO 45678901</p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>

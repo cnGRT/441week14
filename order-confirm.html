@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Confirmation - TechLearn Academy</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">TechLearn Academy</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Order Confirmation</h1>
+    <p>Please review your order before confirming.</p>
+    <p><strong>Welcome,</strong> <span id="user-display">Guest</span></p>
+  </section>
+
+  <!-- Order Summary -->
+  <section class="container order-summary-section">
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="order-items-body"></tbody>
+    </table>
+
+    <div class="cart-total" id="order-total">Total: $0.00</div>
+
+    <div class="order-actions">
+      <button class="btn btn-danger" onclick="editOrder711()">Edit Order</button>
+      <button class="btn" onclick="confirmOrder711()">Confirm Order</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 TechLearn Academy | RTO 45678901</p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="../js/app.js"></script>
+</body>
+</html>

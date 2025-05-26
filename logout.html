@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout - Grant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="nav"></div>
+
+    <div class="logout-container">
+        <h2>Logout Confirmation</h2>
+        <p>Are you sure you want to logout?</p>
+        <div class="logout-actions">
+            <button onclick="handleLogout()">Yes, Logout</button>
+            <button onclick="window.history.back()">Cancel</button>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        function handleLogout() {
+            sessionStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
