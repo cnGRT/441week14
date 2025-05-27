@@ -34,10 +34,39 @@ button:hover,
   cursor: pointer;
 }
 
+/* ===== INTRODUCTION SECTION ===== */
+.introduction-section {
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 0 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.introduction-content {
+  flex: 1;
+}
+
+.introduction-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .introduction-image {
+    margin-top: 2rem;
+  }
 }
 
 /* ===== HEADER & NAVIGATION ===== */
