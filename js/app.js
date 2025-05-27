@@ -660,10 +660,12 @@ document.addEventListener('DOMContentLoaded', () => {
     loadResourceKits711().then(() => initOrderConfirmPage711());
   }
 
- if (document.getElementById('orders-list')) {
+  if (document.getElementById('orders-list')) {
                 initOrderManagement711();
-            }
-
+  }
+  if (!localStorage.getItem('orders')) {
+    localStorage.setItem('orders', '[]');
+  }
 
   const registerForm = document.getElementById('register-form');
   const loginForm = document.getElementById('login-form');
