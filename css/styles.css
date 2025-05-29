@@ -78,7 +78,19 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+/* ===== LOGO STYLES ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto; /* Make sure the logo is on the left */
+}
 
+.logo img {
+  width: auto;
+  height: 50px; /* Adjust to the right height */
+  max-width: 100%; /* Responsive scaling */
+}
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
