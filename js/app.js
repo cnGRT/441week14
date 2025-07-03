@@ -65,6 +65,7 @@ function displayResourceKits711() {
       <div class="resource-kit-card">
         <img src="images/kits/${kit.image}" alt="${kit.name}">
         <h3>${kit.name}</h3>
+        <p><strong>Course Code:</strong> ${kit.courseCode}
         <p>${kit.description}</p>
         <p>$${kit.price.toFixed(2)}</p>
         <button class="btn" onclick="addToCart711('${kit.id}')">Add to Cart</button>
@@ -73,7 +74,6 @@ function displayResourceKits711() {
     container.innerHTML += kitHTML;
   });
 }
-
 // ===== Shopping cart function =====
 function getCartData711() {
   const currentUser = sessionStorage.getItem('currentUser');
@@ -99,25 +99,25 @@ function displayCartItems711() {
     total += subtotal;
 
     const itemHTML = `
-      <div class="cart-item">
-        <img src="images/kits/${kit.image}" alt="${kit.name}">
-        <div class="cart-item-info">
-          <h3>${kit.name}</h3>
-          <p>${kit.description}</p>
-          <p>$${kit.price.toFixed(2)}</p>
-        </div>
-        <div class="cart-item-controls">
-          <button onclick="updateQuantity711('${item.id}', -1)">-</button>
-          <input type="number" value="${item.quantity}" min="1" readonly>
-          <button onclick="updateQuantity711('${item.id}', 1)">+</button>
-          <button class="btn btn-danger" onclick="removeItemFromCart711('${item.id}')">Remove</button>
-        </div>
-        <div class="cart-item-subtotal">$${subtotal.toFixed(2)}</div>
-      </div>
-    `;
+  <div class="cart-item">
+    <img src="images/kits/${kit.image}" alt="${kit.name}">
+    <div class="cart-item-info">
+      <h3>${kit.name}</h3>
+      <p><strong>Course Code:</strong> ${kit.courseCode}</p>  
+      <p>${kit.description}</p>
+      <p>$${kit.price.toFixed(2)}</p>
+    </div>
+    <div class="cart-item-controls">
+      <button onclick="updateQuantity711('${item.id}', -1)">-</button>
+      <input type="number" value="${item.quantity}" min="1" readonly>
+      <button onclick="updateQuantity711('${item.id}', 1)">+</button>
+      <button class="btn btn-danger" onclick="removeItemFromCart711('${item.id}')">Remove</button>
+    </div>
+    <div class="cart-item-subtotal">$${subtotal.toFixed(2)}</div>
+  </div>
+`;
     container.innerHTML += itemHTML;
   });
-
   const totalElement = document.getElementById('cart-total');
   if (totalElement) {
     totalElement.innerText = `Total: $${total.toFixed(2)}`;
