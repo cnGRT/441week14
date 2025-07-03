@@ -30,6 +30,7 @@ function displayCourses711() {
         </div>
         <div class="course-content">
           <h3>${course.name}</h3>
+          <p><strong>Course Code:</strong> ${course.courseCode}
           <p>${course.description}</p>
           <p><strong>Assessment:</strong> ${course.assessment}</p>
           <p><strong>Sample Project:</strong> ${course.sampleProject}</p>
