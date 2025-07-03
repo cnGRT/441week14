@@ -84,6 +84,7 @@ function getCartData711() {
   return cart;
 }
 
+
 function displayCartItems711() {
   const cart = getCartData711();
   const container = document.getElementById('cart-items');
@@ -119,6 +120,7 @@ function displayCartItems711() {
 `;
     container.innerHTML += itemHTML;
   });
+
   const totalElement = document.getElementById('cart-total');
   if (totalElement) {
     totalElement.innerText = `Total: $${total.toFixed(2)}`;
