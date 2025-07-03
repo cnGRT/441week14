@@ -1,6 +1,7 @@
 [
   {
     "id": "K001",
+    "courseCode": "ICTWEB441",
     "name": "HTML & CSS Kit",
     "description": "Comprehensive resources for learning HTML and CSS.",
     "price": 99.00,
@@ -8,6 +9,7 @@
   },
   {
     "id": "K002",
+    "courseCode": "ICTPRG302",
     "name": "JavaScript Essentials",
     "description": "Essential JS tools and exercises.",
     "price": 129.00,
@@ -15,6 +17,7 @@
   },
   {
     "id": "K003",
+    "courseCode": "ICTWEB513",
     "name": "React Developer Bundle",
     "description": "React projects, templates, and documentation.",
     "price": 199.00,
@@ -22,6 +25,7 @@
   },
   {
     "id": "K004",
+    "courseCode": "ICTICT451",
     "name": "Node.js Toolkit",
     "description": "Server-side development tools and examples.",
     "price": 149.00,
@@ -29,6 +33,7 @@
   },
   {
     "id": "K005",
+    "courseCode": "ICTICT443",
     "name": "UI/UX Design Kit",
     "description": "Design principles, Figma templates, and wireframes.",
     "price": 89.00,
@@ -36,6 +41,7 @@
   },
   {
     "id": "K006",
+    "courseCode": "ICTPRG430",
     "name": "Python Programming Guide",
     "description": "From beginner to intermediate Python programming.",
     "price": 119.00,
@@ -43,6 +49,7 @@
   },
   {
     "id": "K007",
+    "courseCode": "ICTICT445",
     "name": "Database Management Starter",
     "description": "SQL and NoSQL database guides and exercises.",
     "price": 109.00,
@@ -50,6 +57,7 @@
   },
   {
     "id": "K008",
+    "courseCode": "ICTICT436",
     "name": "DevOps Tools Pack",
     "description": "Docker, Jenkins, CI/CD pipelines and more.",
     "price": 179.00,
