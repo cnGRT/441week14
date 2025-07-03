@@ -1,47 +1,66 @@
 [
-    {
-        "id": "C001",
-        "name": "Cybersecurity Fundamentals",
-        "description": "Learn essential cybersecurity concepts and practices to protect systems and data.",
-        "assessment": "Written test + Practical demonstration",
-        "sampleProject": "Design a security policy for a small business",
-        "image": "cybersecurity-course.jpg",
-        "imageAlt": "Cybersecurity course illustration"
-    },
-    {
-        "id": "C002",
-        "name": "Full Stack Web Development",
-        "description": "Master front-end and back-end development with modern JavaScript frameworks.",
-        "assessment": "Code submission + Project defense",
-        "sampleProject": "Build a responsive e-commerce site",
-        "image": "webdev-course.jpg",
-        "imageAlt": "Web development course illustration"
-    },
-    {
-        "id": "C003",
-        "name": "Data Science Essentials",
-        "description": "Introduction to data analysis, visualization, and machine learning concepts.",
-        "assessment": "Case study analysis + Final report",
-        "sampleProject": "Analyze and visualize a real-world dataset",
-        "image": "datascience-course.jpg",
-        "imageAlt": "Data science course illustration"
-    },
-    {
-        "id": "C004",
-        "name": "Cloud Computing with AWS",
-        "description": "Learn to deploy and manage applications on Amazon Web Services.",
-        "assessment": "Practical deployment tasks + Documentation",
-        "sampleProject": "Deploy a scalable web application",
-        "image": "aws-course.jpg",
-        "imageAlt": "AWS cloud computing course illustration"
-    },
-    {
-        "id": "C005",
-        "name": "Python Programming",
-        "description": "From basics to advanced Python concepts for automation and development.",
-        "assessment": "Coding challenges + Project submission",
-        "sampleProject": "Create a data processing automation script",
-        "image": "python-course.jpg",
-        "imageAlt": "Python programming course illustration"
-    }
+  {
+    "id": "K001",
+    "courseCode": "ICTWEB441",
+    "name": "HTML & CSS Kit",
+    "description": "Comprehensive resources for learning HTML and CSS.",
+    "price": 99.00,
+    "image": "kit1.jpg"
+  },
+  {
+    "id": "K002",
+    "courseCode": "ICTPRG302",
+    "name": "JavaScript Essentials",
+    "description": "Essential JS tools and exercises.",
+    "price": 129.00,
+    "image": "kit2.jpg"
+  },
+  {
+    "id": "K003",
+    "courseCode": "ICTWEB513",
+    "name": "React Developer Bundle",
+    "description": "React projects, templates, and documentation.",
+    "price": 199.00,
+    "image": "kit3.jpg"
+  },
+  {
+    "id": "K004",
+    "courseCode": "ICTICT451",
+    "name": "Node.js Toolkit",
+    "description": "Server-side development tools and examples.",
+    "price": 149.00,
+    "image": "kit4.jpg"
+  },
+  {
+    "id": "K005",
+    "courseCode": "ICTICT443",
+    "name": "UI/UX Design Kit",
+    "description": "Design principles, Figma templates, and wireframes.",
+    "price": 89.00,
+    "image": "kit5.jpg"
+  },
+  {
+    "id": "K006",
+    "courseCode": "ICTPRG430",
+    "name": "Python Programming Guide",
+    "description": "From beginner to intermediate Python programming.",
+    "price": 119.00,
+    "image": "kit6.jpg"
+  },
+  {
+    "id": "K007",
+    "courseCode": "ICTICT445",
+    "name": "Database Management Starter",
+    "description": "SQL and NoSQL database guides and exercises.",
+    "price": 109.00,
+    "image": "kit7.jpg"
+  },
+  {
+    "id": "K008",
+    "courseCode": "ICTICT436",
+    "name": "DevOps Tools Pack",
+    "description": "Docker, Jenkins, CI/CD pipelines and more.",
+    "price": 179.00,
+    "image": "kit8.jpg"
+  }
 ]
