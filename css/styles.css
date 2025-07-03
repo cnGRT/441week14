@@ -181,7 +181,18 @@ nav a:hover {
   font-size: 0.95rem;
   margin-bottom: 0.3rem;
 }
+/* cart item info ===== */
+.cart-item-info p strong {
+  font-weight: 600;
+  color: #2c3e50;
+}
 
+.cart-item-subtotal {
+  font-weight: bold;
+  color: #e67e22;
+  min-width: 80px;
+  text-align: right;
+}
 /* ===== AUTHENTICATION SECTIONS (Register / Login) ===== */
 .auth-container {
   background-color: white;
